@@ -59,14 +59,17 @@
         </div>
     </section>
 
-    <!-- Shop by Category (6 Categories) -->
+    <!-- Shop by Category Slider Section -->
     <section id="categories" class="categories-section">
         <div class="container">
             <div class="section-header">
                 <h2>Shop by Category</h2>
-                <a href="#" class="view-all">View all categories <i class="fa-solid fa-chevron-right"></i></a>
+                <div class="slider-arrows">
+                    <button onclick="scrollSlider('catSlider', -300)" class="arrow-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button onclick="scrollSlider('catSlider', 300)" class="arrow-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
             </div>
-            <div class="category-grid">
+            <div class="horizontal-slider" id="catSlider">
                 <div class="cat-card">
                     <div class="cat-img-box"><img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80" alt="Plush Toys"></div>
                     <h3>Plush Toys</h3>
@@ -123,14 +126,17 @@
         </div>
     </section>
 
-    <!-- Best Sellers Section (6 Cards) -->
+    <!-- Best Sellers Slider Section -->
     <section id="shop" class="best-sellers">
         <div class="container">
             <div class="section-header">
-                <h2>Best Sellers</h2>
-                <a href="#" class="view-all">View all products <i class="fa-solid fa-chevron-right"></i></a>
+                <h2>Best Sellers & Unique Gifts</h2>
+                <div class="slider-arrows">
+                    <button onclick="scrollSlider('productSlider', -300)" class="arrow-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button onclick="scrollSlider('productSlider', 300)" class="arrow-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
             </div>
-            <div class="product-grid">
+            <div class="horizontal-slider" id="productSlider">
                 <div class="product-card">
                     <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=500&q=80" alt="Cuddly Teddy Bear">
                     <h4>Cuddly Teddy Bear</h4>
@@ -226,6 +232,14 @@
         </div>
     </footer>
 
+    <!-- Slider JavaScript -->
+    <script>
+        function scrollSlider(sliderId, distance) {
+            const slider = document.getElementById(sliderId);
+            slider.scrollBy({ left: distance, behavior: 'smooth' });
+        }
+    </script>
+
 </body>
     </html>
-                                                                                                                                            
+                                                                                                                                                                                                                                
