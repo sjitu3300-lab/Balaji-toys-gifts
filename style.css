@@ -188,9 +188,21 @@ body {
     margin-bottom: 25px;
 }
 
+.section-header.text-center {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 .section-header h2 {
     font-size: 24px;
     font-weight: 700;
+}
+
+.section-header p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
 }
 
 .slider-arrows {
@@ -495,107 +507,108 @@ body {
     color: #777;
 }
 
-/* Inder Paradise Dark Theme Location Section */
-.location-dark-section {
-    background-color: #111;
-    color: #fff;
-    padding: 60px 0;
+/* Store Location & WhatsApp Section (Light Pastel Theme) */
+.store-location-section {
+    padding: 50px 0;
+    background-color: #fff5f8;
 }
 
-.location-dark-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
+.location-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
     align-items: stretch;
 }
 
-.location-dark-text {
-    flex: 1;
+.location-card-box {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    border: 2px solid #ffe6f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 320px;
 }
 
 .get-in-touch-tag {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
-    color: #FFD700;
+    color: #FF69B4;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 
-.location-dark-text h2 {
-    font-size: 32px;
-    color: #FFD700;
-    margin: 10px 0 15px 0;
+.text-box h3 {
+    font-size: 22px;
+    color: #2C3E50;
+    margin: 8px 0 12px 0;
 }
 
 .location-desc {
-    font-size: 14px;
-    color: #aaa;
-    line-height: 1.6;
-    margin-bottom: 25px;
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
-.dark-address-list {
+.address-points {
     list-style: none;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
-.dark-address-list li {
+.address-points li {
+    font-size: 13px;
+    color: #444;
+    margin-bottom: 10px;
     display: flex;
-    gap: 15px;
-    margin-bottom: 18px;
-    font-size: 14px;
-    color: #ccc;
+    align-items: flex-start;
+    gap: 10px;
     line-height: 1.5;
 }
 
-.dark-address-list li i {
-    color: #FFD700;
-    font-size: 18px;
+.address-points li i {
+    color: #FF69B4;
     margin-top: 3px;
-}
-
-.dark-address-list strong {
-    color: #fff;
 }
 
 .whatsapp-chat-btn {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    background-color: #e53935;
+    justify-content: center;
+    gap: 8px;
+    background-color: #25D366;
     color: white;
-    padding: 12px 25px;
-    border-radius: 6px;
+    padding: 10px 20px;
+    border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13px;
     transition: 0.3s;
+    align-self: flex-start;
 }
 
 .whatsapp-chat-btn:hover {
-    background-color: #d32f2f;
+    background-color: #20ba5a;
 }
 
-.location-dark-map {
-    flex: 1;
-    min-height: 380px;
-    border-radius: 12px;
+.map-box {
+    padding: 0;
     overflow: hidden;
-    border: 2px solid #333;
 }
 
-.location-dark-map iframe {
+.map-box iframe {
     width: 100%;
     height: 100%;
-    border: 0;
+    min-height: 320px;
+    border-radius: 18px;
 }
 
-/* Footer */
 .footer {
-    background-color: #0a0a0a;
+    background-color: #2C3E50;
     color: white;
     padding: 50px 0 20px 0;
-    border-top: 1px solid #222;
 }
 
 .footer-container {
@@ -612,7 +625,7 @@ body {
 }
 
 .footer-col p, .footer-col li a {
-    color: #aaa;
+    color: #ccc;
     font-size: 13px;
     text-decoration: none;
     line-height: 1.8;
@@ -622,36 +635,12 @@ body {
     list-style: none;
 }
 
-.subscribe-box {
-    display: flex;
-    margin-top: 10px;
-}
-
-.subscribe-box input {
-    width: 100%;
-    padding: 10px;
-    background: #222;
-    border: 1px solid #444;
-    color: #fff;
-    border-radius: 4px 0 0 4px;
-    outline: none;
-}
-
-.subscribe-box button {
-    background: #e53935;
-    color: white;
-    border: none;
-    padding: 0 15px;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-}
-
 .footer-bottom {
     text-align: center;
-    border-top: 1px solid #222;
+    border-top: 1px solid rgba(255,255,255,0.1);
     padding-top: 20px;
     font-size: 12px;
-    color: #777;
+    color: #aaa;
 }
 
 /* Floating WhatsApp Button */
@@ -666,7 +655,7 @@ body {
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     z-index: 9999;
     display: flex;
     align-items: center;
@@ -687,11 +676,8 @@ body {
     .age-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    .location-dark-container {
-        flex-direction: column;
-    }
-    .location-dark-map {
-        min-height: 300px;
+    .location-grid {
+        grid-template-columns: 1fr;
     }
 }
 
