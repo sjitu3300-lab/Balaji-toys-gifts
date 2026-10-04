@@ -188,9 +188,21 @@ body {
     margin-bottom: 25px;
 }
 
+.section-header.text-center {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 .section-header h2 {
     font-size: 24px;
     font-weight: 700;
+}
+
+.section-header p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
 }
 
 .slider-arrows {
@@ -495,31 +507,38 @@ body {
     color: #777;
 }
 
-/* Store Location & Map Section (Left Text, Right Compact Map) */
+/* Store Location & Square Cards Section */
 .store-location-section {
-    padding: 40px 0;
+    padding: 50px 0;
     background-color: #fff5f8;
 }
 
-.location-container {
+.location-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    align-items: stretch;
+}
+
+.location-card-box {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    border: 2px solid #ffe6f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 320px;
+}
+
+.text-box h3 {
+    font-size: 20px;
+    color: #FF69B4;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    background: #fff;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-}
-
-.location-text {
-    flex: 1;
-}
-
-.location-text h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: #2C3E50;
+    gap: 10px;
 }
 
 .address-points {
@@ -528,12 +547,12 @@ body {
 
 .address-points li {
     font-size: 14px;
-    color: #555;
+    color: #444;
     margin-bottom: 12px;
     display: flex;
     align-items: flex-start;
     gap: 10px;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .address-points li i {
@@ -541,14 +560,16 @@ body {
     margin-top: 4px;
 }
 
-.location-map {
-    flex: 1;
-    max-width: 450px;
+.map-box {
+    padding: 0;
+    overflow: hidden;
 }
 
-.location-map iframe {
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+.map-box iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    border-radius: 18px;
 }
 
 .footer {
@@ -598,12 +619,8 @@ body {
     .age-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    .location-container {
-        flex-direction: column;
-    }
-    .location-map {
-        max-width: 100%;
-        width: 100%;
+    .location-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -634,4 +651,4 @@ body {
         grid-template-columns: 1fr;
         text-align: center;
     }
-    }
+}
